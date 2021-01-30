@@ -16,7 +16,7 @@ for i in range(len(secretWord)):
     if (i==len(secretWord)-1):
         hiddenWord+="]"
 
-#Main loop to run through the hangman game
+#Main loop to run through the hangman game // error with regards to the while loop, victory is not outside of the while loop!
 while (numberOfGuessesLeft>0):
     guess = (input(hiddenWord+" You have " + str(numberOfGuessesLeft)+ " guesses left, enter a letter: ")).lower()
     #Checks if guess is in the secret word
@@ -36,9 +36,9 @@ while (numberOfGuessesLeft>0):
             print("Incorrect!")
 
     #if all letters are guessed
-    if not "-" in hiddenWord:
+if not "-" in hiddenWord:
         print("You win! The word was "+ '"'+secretWord.upper()+'"')
         break
     # if user is out of guesses
-    if (numberOfGuessesLeft==0):
+if (numberOfGuessesLeft==0):
         print ('You lose! The word was "'+ secretWord.upper()+'"')
