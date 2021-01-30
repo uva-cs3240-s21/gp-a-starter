@@ -38,7 +38,7 @@ while (numberOfGuessesLeft>0):
     #if all letters are guessed
 if not "-" in hiddenWord:
         print("You win! The word was "+ '"'+secretWord.upper()+'"')
-        break
+        #break
     # if user is out of guesses
 if (numberOfGuessesLeft==0):
         print ('You lose! The word was "'+ secretWord.upper()+'"')
